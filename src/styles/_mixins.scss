@@ -1,0 +1,83 @@
+// ============================================
+// RESPONSIVE DESIGN MIXINS
+// ============================================
+
+// Breakpoints
+$mobile: 320px;
+$tablet: 744px;
+$laptop: 1260px;
+
+// ============================================
+// MIXIN: Media Queries
+// ============================================
+
+// Mobile first approach - tablet and up
+@mixin for-tablet-up {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+// Laptop and up
+@mixin for-laptop-up {
+  @media (min-width: $laptop) {
+    @content;
+  }
+}
+
+// Tablet only (between tablet and laptop)
+@mixin for-tablet-only {
+  @media (min-width: $tablet) and (max-width: calc($laptop - 1px)) {
+    @content;
+  }
+}
+
+// Mobile only (less than tablet)
+@mixin for-mobile-only {
+  @media (max-width: calc($tablet - 1px)) {
+    @content;
+  }
+}
+
+// ============================================
+// UTILITY MIXINS
+// ============================================
+
+// Flexible font sizing based on viewport
+@mixin responsive-font($mobile-size, $tablet-size, $laptop-size) {
+  font-size: $mobile-size;
+
+  @include for-tablet-up {
+    font-size: $tablet-size;
+  }
+
+  @include for-laptop-up {
+    font-size: $laptop-size;
+  }
+}
+
+// Flexible padding/margin
+@mixin responsive-spacing($mobile-val, $tablet-val, $laptop-val) {
+  padding: $mobile-val;
+
+  @include for-tablet-up {
+    padding: $tablet-val;
+  }
+
+  @include for-laptop-up {
+    padding: $laptop-val;
+  }
+}
+
+// Flexible width
+@mixin responsive-width($mobile-width, $tablet-width, $laptop-width) {
+  width: $mobile-width;
+
+  @include for-tablet-up {
+    width: $tablet-width;
+  }
+
+  @include for-laptop-up {
+    width: $laptop-width;
+  }
+}

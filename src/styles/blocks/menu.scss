@@ -1,49 +1,80 @@
+@use '../mixins';
+
 .menu {
   background-color: #c2c2c2;
   font-weight: 700;
   text-transform: uppercase;
-}
 
-.menu__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 20px;
-  margin-bottom: 24px;
-}
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    margin-bottom: 24px;
 
-.menu__bottom {
-  padding: 0 20px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  color: #1d1d1d;
-}
+    @include mixins.for-tablet-up {
+      padding: 36px 72px;
+      margin-bottom: 8px;
+    }
 
-.menu__footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+    @include mixins.for-laptop-up {
+      padding: 40px 80px;
 
-.menu__phone-number {
-  font-weight: 600;
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 27px;
-}
+    }
 
-.menu__book-ride {
-  font-weight: 600;
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 2px;
-  width: fit-content;
-  padding-bottom: 7px;
-  border-bottom: #1d1d1d 1px solid;
+    // Keep logo inside menu the same size as on mobile (override header's tablet rule)
+    .header__logo-img {
+      height: auto;
+      width: auto;
+
+      @include mixins.for-tablet-up {
+        /* override header's 56px on tablet so menu logo stays mobile-sized */
+        height: auto;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 0 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #1d1d1d;
+
+    @include mixins.for-tablet-up {
+      padding: 0 72px 60px;
+    }
+
+    @include mixins.for-laptop-up {
+      padding: 0 80px 80px;
+    }
+  }
+
+  &__footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__phone-number {
+    font-weight: 600;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  &__book-ride {
+    font-weight: 600;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    width: fit-content;
+    padding-bottom: 7px;
+    border-bottom: #1d1d1d 1px solid;
+  }
 }

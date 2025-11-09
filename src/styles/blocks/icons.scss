@@ -1,6 +1,16 @@
+@use '../mixins';
+
 .header__icons {
   display: flex;
   gap: 24px;
+
+  @include mixins.for-tablet-up {
+    gap: 32px;
+  }
+
+  @include mixins.for-laptop-up {
+    gap: 40px;
+  }
 }
 
 .icon {
@@ -9,16 +19,26 @@
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
-}
 
-.icon--phone {
-  background-image: url(./../icons/Icon-Phone-call.svg);
-}
+  @include mixins.for-tablet-up {
+    width: 32px;
+    height: 32px;
+  }
 
-.icon--menu {
-  background-image: url(./../icons/Icon-Burger-menu.svg);
-}
+  @include mixins.for-laptop-up {
+    width: 40px;
+    height: 40px;
+  }
 
-.icon--close {
-  background-image: url(./../icons/Icon-Close.svg);
+  &--phone {
+    background-image: url(./../icons/Icon-Phone-call.svg);
+  }
+
+  &--menu {
+    background-image: url(./../icons/Icon-Burger-menu.svg);
+  }
+
+  &--close {
+    background-image: url(./../icons/Icon-Close.svg);
+  }
 }

@@ -1,3 +1,5 @@
+@use '../mixins';
+
 .header {
   height: 100vh;
   background-image: url(./../images/Cover_photo.png);
@@ -8,39 +10,91 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include mixins.for-tablet-up {
+    background-position: center;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+
+    @include mixins.for-tablet-up {
+      padding: 36px 72px;
+    }
+
+    @include mixins.for-laptop-up {
+      padding: 40px 80px;
+    }
+  }
+
+  &__bottom {
+    padding: 0 20px;
+    margin-bottom: 88px;
+
+    @include mixins.for-tablet-up {
+      padding: 0 72px;
+      margin-bottom: 130px;
+    }
+
+    @include mixins.for-laptop-up {
+      padding: 0 80px;
+      margin-bottom: 160px;
+    }
+  }
+
+  &__title {
+    width: 279px;
+    margin: 0 auto;
+    align-self: center;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    text-align: center;
+    color: #fff;
+
+    @include mixins.for-tablet-up {
+      font-size: 64px;
+
+      /* allow title to occupy full width and avoid wrapping */
+      width: auto;
+      max-width: none;
+      white-space: nowrap;
+      overflow-wrap: normal;
+
+    }
+
+    @include mixins.for-laptop-up {
+      font-size: 64px;
+      max-width: 700px;
+    }
+  }
+
+  &__logo {
+    line-height: 0;
+
+    // BEM element for logo image
+    &-img {
+      display: block;
+      height: auto;
+      width: auto;
+      max-width: 100%;
+
+      // Tablet and up: fixed height
+      @include mixins.for-tablet-up {
+        height: 56px;
+        width: auto;
+      }
+
+      // Laptop: keep same or override if needed
+      @include mixins.for-laptop-up {
+        height: 56px;
+      }
+    }
+  }
+
 }
-
-/* #region Header Top */
-.header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 20px;
-}
-
-/* #endregion */
-
-/* #region Header Bottom */
-.header__bottom {
-  padding: 0 20px;
-  margin-bottom: 88px;
-}
-
-.header__title {
-  width: 279px;
-  margin: 0 auto;
-
-  font-family: Poppins, sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 100%;
-  letter-spacing: -1.5px;
-  text-align: center;
-  color: #fff;
-}
-
-.header__logo {
-  line-height: 0;
-}
-
-/* #endregion */
