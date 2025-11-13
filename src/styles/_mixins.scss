@@ -81,3 +81,10 @@ $laptop: 1260px;
     width: $laptop-width;
   }
 }
+
+ .container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+ }
