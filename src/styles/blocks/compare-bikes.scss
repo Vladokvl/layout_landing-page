@@ -1,0 +1,125 @@
+@use '../mixins';
+
+// ===== Compare Bikes Section =====
+  .compare-bikes {
+    padding: 40px 0;
+
+    @include mixins.for-tablet-up {
+      padding: 120px 0;
+      margin: 0 104px;
+    }
+
+    @include mixins.for-laptop-up {
+      padding: 80px 0;
+      margin: 0;
+    }
+
+    &__heading {
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: -1.5px;
+      text-align: center;
+      text-transform: capitalize;
+      margin: 0 0 48px;
+
+      @include mixins.for-tablet-up {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 48px;
+      }
+
+      @include mixins.for-laptop-up {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 80px;
+      }
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @include mixins.for-tablet-up {
+        gap: 48px;
+      }
+
+      @include mixins.for-laptop-up {
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+      }
+    }
+  }
+
+  // ===== Bike Card =====
+  .bike-card {
+    text-align: left;
+
+    @include mixins.for-laptop-up {
+      max-width: 280px;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 32px;
+
+      @include mixins.for-laptop-up {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__title {
+      font-family: Poppins, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: 0;
+      margin: 0 0 8px;
+
+      @include mixins.for-tablet-up {
+        font-size: 28px;
+      }
+
+      @include mixins.for-laptop-up {
+        font-size: 32px;
+      }
+    }
+
+    &__description {
+      font-family: Poppins, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0;
+      margin: 0 0 16px;
+
+      @include mixins.for-tablet-up {
+        font-size: 16px;
+      }
+
+      @include mixins.for-laptop-up {
+        font-size: 16px;
+      }
+    }
+
+    &__price {
+      font-family: Poppins, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: 0;
+      margin: 0;
+
+      @include mixins.for-tablet-up {
+        font-size: 28px;
+      }
+
+      @include mixins.for-laptop-up {
+        font-size: 32px;
+      }
+    }
+  }

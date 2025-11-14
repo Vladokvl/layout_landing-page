@@ -39,52 +39,13 @@ $laptop: 1260px;
   }
 }
 
-// ============================================
-// UTILITY MIXINS
-// ============================================
-
-// Flexible font sizing based on viewport
-@mixin responsive-font($mobile-size, $tablet-size, $laptop-size) {
-  font-size: $mobile-size;
-
-  @include for-tablet-up {
-    font-size: $tablet-size;
-  }
-
-  @include for-laptop-up {
-    font-size: $laptop-size;
-  }
-}
-
-// Flexible padding/margin
-@mixin responsive-spacing($mobile-val, $tablet-val, $laptop-val) {
-  padding: $mobile-val;
-
-  @include for-tablet-up {
-    padding: $tablet-val;
-  }
-
-  @include for-laptop-up {
-    padding: $laptop-val;
-  }
-}
-
-// Flexible width
-@mixin responsive-width($mobile-width, $tablet-width, $laptop-width) {
-  width: $mobile-width;
-
-  @include for-tablet-up {
-    width: $tablet-width;
-  }
-
-  @include for-laptop-up {
-    width: $laptop-width;
-  }
-}
-
- .container {
+.container {
   box-sizing: border-box;
   max-width: 1200px;
   width: 100%;
   padding: 0 20px;
- }
+
+  @include for-tablet-up {
+      padding: 0 72px;
+    }
+}

@@ -13,12 +13,12 @@
     margin-bottom: 24px;
 
     @include mixins.for-tablet-up {
-      padding: 36px 72px;
+      padding: 36px 0;
       margin-bottom: 8px;
     }
 
     @include mixins.for-laptop-up {
-      padding: 40px 80px;
+      padding: 40px 0;
 
     }
 
@@ -42,11 +42,11 @@
     color: #1d1d1d;
 
     @include mixins.for-tablet-up {
-      padding: 0 72px 60px;
+      padding: 0 0 60px;
     }
 
     @include mixins.for-laptop-up {
-      padding: 0 80px 80px;
+      padding: 0 0 80px;
     }
   }
 

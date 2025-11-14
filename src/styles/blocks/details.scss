@@ -1,0 +1,145 @@
+@use '../mixins';
+
+// ===== Details Section =====
+  .details {
+    padding: 40px 0;
+
+    @include mixins.for-tablet-up {
+      padding: 120px 0;
+    }
+
+    @include mixins.for-laptop-up {
+      padding: 80px 0;
+    }
+
+    &__heading {
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: -1.5px;
+      text-align: center;
+      text-transform: capitalize;
+      margin: 0 0 40px;
+
+      @include mixins.for-tablet-up {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 60px;
+      }
+
+      @include mixins.for-laptop-up {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 80px;
+      }
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @include mixins.for-tablet-up {
+        gap: 60px;
+      }
+
+      @include mixins.for-laptop-up {
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+      }
+    }
+  }
+
+  // ===== Feature Card =====
+  .feature-card {
+    text-align: left;
+
+    @include mixins.for-laptop-up {
+      max-width: 320px;
+    }
+
+    &__images {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      align-items: stretch;
+      overflow: hidden;
+
+      @include mixins.for-tablet-up {
+        display: grid;
+        gap: 24px;
+        margin-bottom: 24px;
+        grid-template-columns: 2fr 1fr;
+      }
+
+      @include mixins.for-laptop-up {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 32px;
+        grid-template-columns: auto;
+      }
+
+      &--reversed {
+        @include mixins.for-tablet-up {
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+    }
+
+    &__image {
+      flex: 1 1 0;
+      min-width: 0;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+
+      @include mixins.for-tablet-up {
+        aspect-ratio: auto;
+        height: auto;
+        object-fit: contain;
+      }
+
+      @include mixins.for-laptop-up {
+        flex: 1 1 0;
+        min-width: 0;
+      }
+    }
+
+    &__title {
+      font-family: Poppins, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: 0;
+      margin: 0 0 8px;
+
+      @include mixins.for-tablet-up {
+        font-size: 28px;
+      }
+
+      @include mixins.for-laptop-up {
+        font-size: 32px;
+      }
+    }
+
+    &__description {
+      font-family: Poppins, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0;
+      margin: 0;
+
+      @include mixins.for-tablet-up {
+        font-size: 16px;
+      }
+
+      @include mixins.for-laptop-up {
+        font-size: 16px;
+      }
+    }
+  }
