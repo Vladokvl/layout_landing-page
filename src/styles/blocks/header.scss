@@ -23,15 +23,29 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 0;
+
+    @include mixins.for-tablet-up {
+      padding: 36px 0;
+    }
+
+    @include mixins.for-laptop-up {
+      padding: 36px 0;
+    }
   }
 
   &__bottom {
-    margin-bottom: 88px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 88px;
+
+    @include mixins.for-laptop-up {
+      padding-bottom: 203px;
+    }
   }
 
   &__title {
-    width: 279px;
-    margin: 0 auto;
+    margin: 0;
+    width: 100%;
     align-self: center;
     font-family: Poppins, sans-serif;
     font-weight: 700;
@@ -43,18 +57,10 @@
 
     @include mixins.for-tablet-up {
       font-size: 64px;
-
-      /* allow title to occupy full width and avoid wrapping */
-      width: auto;
-      max-width: none;
-      white-space: nowrap;
-      overflow-wrap: normal;
-
     }
 
     @include mixins.for-laptop-up {
-      font-size: 64px;
-      max-width: 700px;
+      font-size: 80px;
     }
   }
 
@@ -77,6 +83,7 @@
       // Laptop: keep same or override if needed
       @include mixins.for-laptop-up {
         height: 56px;
+        width: 187px;
       }
     }
   }

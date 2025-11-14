@@ -38,28 +38,23 @@
     }
 
     &__cards {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
+      @include mixins.responsive-grid(1, 20px, 6, 24px, 12, 24px);
 
-      @include mixins.for-tablet-up {
-        gap: 48px;
-      }
-
-      @include mixins.for-laptop-up {
-        flex-direction: row;
-        justify-content: center;
-        gap: 80px;
-      }
+      justify-items: stretch;
     }
   }
 
   // ===== Bike Card =====
   .bike-card {
     text-align: left;
+    grid-column: #{mixins.$compare-bikes-card-mobile-columns};
+
+    @include mixins.for-tablet-up {
+      grid-column: #{mixins.$compare-bikes-card-tablet-columns};
+    }
 
     @include mixins.for-laptop-up {
-      max-width: 280px;
+      grid-column: #{mixins.$compare-bikes-card-desktop-columns};
     }
 
     &__image {

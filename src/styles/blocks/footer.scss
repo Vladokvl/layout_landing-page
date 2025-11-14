@@ -16,13 +16,11 @@
 
     @include mixins.for-tablet-up {
       height: 480px;
-      margin-top: 120px;
       object-position: center center;
     }
 
     @include mixins.for-laptop-up {
       height: 400px;
-      margin-top: 200px;
       object-position: center center;
     }
   }

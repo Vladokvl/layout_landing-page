@@ -5,35 +5,6 @@
   font-weight: 700;
   text-transform: uppercase;
 
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 0;
-    margin-bottom: 24px;
-
-    @include mixins.for-tablet-up {
-      padding: 36px 0;
-      margin-bottom: 8px;
-    }
-
-    @include mixins.for-laptop-up {
-      padding: 40px 0;
-
-    }
-
-    // Keep logo inside menu the same size as on mobile (override header's tablet rule)
-    .header__logo-img {
-      height: auto;
-      width: auto;
-
-      @include mixins.for-tablet-up {
-        /* override header's 56px on tablet so menu logo stays mobile-sized */
-        height: auto;
-      }
-    }
-  }
-
   &__bottom {
     padding: 0 0 40px;
     display: flex;
@@ -46,7 +17,7 @@
     }
 
     @include mixins.for-laptop-up {
-      padding: 0 0 80px;
+      padding: 24px 0 80px;
     }
   }
 
