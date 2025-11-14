@@ -32,6 +32,27 @@
 
   &--phone {
     background-image: url(./../icons/Icon-Phone-call.svg);
+
+    &--wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+    }
+
+    &--number {
+      align-self: center;
+      color: #FFF;
+      font-family: inherit;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-align: right;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
   }
 
   &--menu {

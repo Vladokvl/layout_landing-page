@@ -38,6 +38,10 @@
     justify-content: center;
     padding-bottom: 88px;
 
+    @include mixins.for-tablet-up {
+      padding-bottom: 130px;
+    }
+
     @include mixins.for-laptop-up {
       padding-bottom: 203px;
     }
@@ -77,7 +81,7 @@
       // Tablet and up: fixed height
       @include mixins.for-tablet-up {
         height: 56px;
-        width: auto;
+        width: 187px;
       }
 
       // Laptop: keep same or override if needed
