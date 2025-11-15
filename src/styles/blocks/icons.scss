@@ -35,14 +35,15 @@
 
     &--wrapper {
       display: flex;
+      flex-direction: row-reverse;
       align-items: center;
       gap: 20px;
-
+      position: relative;
     }
 
     &--number {
       align-self: center;
-      color: #FFF;
+      color: #fff;
       font-family: inherit;
       font-weight: 700;
       font-style: Bold;
@@ -52,7 +53,20 @@
       text-align: right;
       vertical-align: middle;
       text-transform: uppercase;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateX(4px);
+      pointer-events: none;
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
     }
+  }
+
+  &--phone:hover ~ .icon--phone--number {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
   }
 
   &--menu {
