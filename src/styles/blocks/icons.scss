@@ -32,8 +32,12 @@
 
   &--phone {
     background-image: url(./../icons/Icon-Phone-call.svg);
+    &--number {
+      display: none;
+    }
 
-    &--wrapper {
+    @include mixins.for-laptop-up {
+      &--wrapper {
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
@@ -42,6 +46,7 @@
     }
 
     &--number {
+      display: block;
       align-self: center;
       color: #fff;
       font-family: inherit;
@@ -51,7 +56,6 @@
       line-height: 16px;
       letter-spacing: 2px;
       text-align: right;
-      vertical-align: middle;
       text-transform: uppercase;
       text-decoration: none;
       opacity: 0;
@@ -61,6 +65,8 @@
         opacity 0.3s ease,
         transform 0.3s ease;
     }
+    }
+
   }
 
   &--phone:hover ~ .icon--phone--number {
