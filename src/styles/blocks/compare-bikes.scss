@@ -14,29 +14,6 @@
       margin: 0;
     }
 
-    &__heading {
-      font-family: Poppins, sans-serif;
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 32px;
-      letter-spacing: -1.5px;
-      text-align: center;
-      text-transform: capitalize;
-      margin: 0 0 48px;
-
-      @include mixins.for-tablet-up {
-        font-size: 48px;
-        line-height: 48px;
-        margin-bottom: 48px;
-      }
-
-      @include mixins.for-laptop-up {
-        font-size: 48px;
-        line-height: 48px;
-        margin-bottom: 80px;
-      }
-    }
-
     &__cards {
       @include mixins.responsive-grid(1, 20px, 6, 24px, 12, 24px);
 
