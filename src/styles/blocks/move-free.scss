@@ -2,7 +2,7 @@
 
 // ===== Move Free Section =====
   .move-free {
-    padding: 40px 0;
+    padding: 40px 0 92px;
 
     @include mixins.responsive-grid(2, 20px, 6, 24px, 12, 24px);
 
