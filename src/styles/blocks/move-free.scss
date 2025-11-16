@@ -2,17 +2,17 @@
 
 // ===== Move Free Section =====
   .move-free {
-    padding: 40px 0 92px;
+    padding: 40px 0 0;
 
     @include mixins.responsive-grid(2, 20px, 6, 24px, 12, 24px);
 
     @include mixins.for-tablet-up {
-      padding: 120px 0 132px;
+      padding: 120px 0 0;
       align-items: start;
     }
 
     @include mixins.for-laptop-up {
-      padding: 120px 0 164px;
+      padding: 120px 0 0;
     }
 
     &__title {

@@ -2,13 +2,16 @@
 
 // ===== Contact Section =====
 .contact {
+  padding-top: 120px;
   padding-bottom: 120px;
 
   @include mixins.for-tablet-up {
+      padding-top: 102px;
       padding-bottom: 102px;
     }
 
     @include mixins.for-laptop-up {
+      padding-top: 164px;
       padding-bottom: 164px;
     }
 

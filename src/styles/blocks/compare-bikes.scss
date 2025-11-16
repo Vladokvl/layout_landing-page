@@ -2,15 +2,15 @@
 
 // ===== Compare Bikes Section =====
   .compare-bikes {
-    padding-bottom: 92px;
+    padding-top: 92px;
     margin: 0;
 
     @include mixins.for-tablet-up {
-      padding-bottom: 120px;
+      padding-top: 120px;
     }
 
     @include mixins.for-laptop-up {
-      padding-bottom: 144px;
+      padding-top: 144px;
     }
 
     &__cards {
