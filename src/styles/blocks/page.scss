@@ -6,6 +6,10 @@
     margin: 0;
   }
 
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+
   &__menu {
     width: 100%;
     height: 100vh;

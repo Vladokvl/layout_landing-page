@@ -12,6 +12,11 @@
     />
     <title>My bike</title>
     <link
+      rel="icon"
+      href="./src/images/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
       rel="stylesheet"
       href="src/styles/styles.scss"
     />
@@ -39,18 +44,18 @@
       <div class="container">
         <div class="header__content">
           <div class="header__top">
-            <a href="#" class="header__logo"><img class="header__logo-img"
+            <a href="#home" class="header__logo"><img class="header__logo-img"
                 src="./src/images/Logo.svg"
                 alt="My bike logo"
               /></a>
             <div class="header__icons">
               <div class="icon--phone--wrapper">
               <a
-                href="#"
+                href="tel:+1 234 555-55-55"
                 class="icon icon--phone"
               ></a>
               <a
-                href="#"
+                href="tel:+1 234 555-55-55"
                 class="icon--phone--number"
               >+1 234 555-55-55</a>
 
@@ -77,7 +82,7 @@
         class="menu__content"
       >
         <div class="header__top">
-          <a href="#" class="header__logo">
+          <a href="#home" class="header__logo">
             <img class="header__logo-img"
               src="./src/images/LogoMenu.svg"
               alt="My bike logo"
@@ -104,7 +109,7 @@
               </li>
               <li class="nav__item">
                 <a
-                  href="#aboutus"
+                  href="#home"
                   class="nav__link"
                 >
                   About Us
@@ -148,7 +153,7 @@
       <div class="container">
         <div class="main__content">
       <!-- Move Free Section -->
-      <section class="move-free">
+      <section class="move-free" id="home">
         <h2 class="move-free__title">Move Free</h2>
         <p class="move-free__description">
           Shift your ride, not gears. Find the fastest way to move in the city as the bike adapts intuitively to power the speed you need.
@@ -156,15 +161,17 @@
       </section>
 
       <!-- Compare Bikes Section -->
-      <section class="compare-bikes">
+      <section class="compare-bikes" id="comparebikes">
         <div class="section-title">
           <h2 class="section-title__content">Compare Bikes</h2>
         </div>
 
-        <div class="compare-bikes__cards">
+          <div class="compare-bikes__cards">
           <!-- Bike Card 1 -->
           <div class="bike-card">
-            <img src="./src/images/Sporty4img.png" alt="Sporty 4" class="bike-card__image" />
+            <a href="#" class="bike-card__link">
+              <img src="./src/images/Sporty4img.png" alt="Sporty 4" class="bike-card__image" />
+            </a>
             <h3 class="bike-card__title">Sporty 4</h3>
             <p class="bike-card__description">
               The iconic frame brought to a new performance height as a sporty, active ride.
@@ -174,7 +181,9 @@
 
           <!-- Bike Card 2 -->
           <div class="bike-card">
-            <img src="./src/images/RideintownSTimg.png" alt="Ride in town ST" class="bike-card__image" />
+            <a href="#" class="bike-card__link">
+              <img src="./src/images/RideintownSTimg.png" alt="Ride in town ST" class="bike-card__image" />
+            </a>
             <h3 class="bike-card__title">Ride in town ST</h3>
             <p class="bike-card__description">
               An open frame for an upright riding position as the most comfortable ride in town.
@@ -184,7 +193,9 @@
 
           <!-- Bike Card 3 -->
           <div class="bike-card">
-            <img src="./src/images/Agileride3img.png" alt="Agile Ride 3" class="bike-card__image" />
+            <a href="#" class="bike-card__link">
+              <img src="./src/images/Agileride3img.png" alt="Agile Ride 3" class="bike-card__image" />
+            </a>
             <h3 class="bike-card__title">Agile Ride 3</h3>
             <p class="bike-card__description">
               The lightweight frame that has earned its street tread as a sleek, agile ride.
@@ -195,7 +206,7 @@
       </section>
 
       <!-- The Details Section -->
-      <section class="details">
+      <section class="details" id="details">
         <div class="section-title">
           <h2 class="section-title__content">The Details</h2>
         </div>
@@ -204,8 +215,12 @@
           <!-- Feature Card 1 -->
           <div class="feature-card">
             <div class="feature-card__images">
-              <img src="./src/images/autounlock1large.png" alt="Auto Unlock feature 1" class="feature-card__images__image" />
-              <img src="./src/images/autounlock2.png" alt="Auto Unlock feature 2" class="feature-card__images__image" />
+              <a href="#" class="feature-card__images__link">
+                <img src="./src/images/autounlock1large.png" alt="Auto Unlock feature 1" class="feature-card__images__image" />
+              </a>
+              <a href="#" class="feature-card__images__link">
+                <img src="./src/images/autounlock2.png" alt="Auto Unlock feature 2" class="feature-card__images__image" />
+              </a>
             </div>
             <h3 class="feature-card__title">Auto Unlock</h3>
             <p class="feature-card__description">
@@ -216,8 +231,12 @@
           <!-- Feature Card 2 -->
           <div class="feature-card">
             <div class="feature-card__images">
-              <img src="./src/images/lights1large.png" alt="Lights feature 1" class="feature-card__images__image" />
-              <img src="./src/images/lights2.png" alt="Lights feature 2" class="feature-card__images__image" />
+              <a href="#" class="feature-card__images__link">
+                <img src="./src/images/lights1large.png" alt="Lights feature 1" class="feature-card__images__image" />
+              </a>
+              <a href="#" class="feature-card__images__link">
+                <img src="./src/images/lights2.png" alt="Lights feature 2" class="feature-card__images__image" />
+              </a>
             </div>
             <h3 class="feature-card__title">Range & Integrated lights</h3>
             <p class="feature-card__description">
@@ -228,8 +247,12 @@
           <!-- Feature Card 3 -->
           <div class="feature-card">
             <div class="feature-card__images feature-card__images--reversed">
-              <img src="./src/images/brakes1.png" alt="Brakes feature 1" class="feature-card__images__image" />
-              <img src="./src/images/brakes2large.png" alt="Brakes feature 2" class="feature-card__images__image" />
+              <a href="#" class="feature-card__images__link">
+                <img src="./src/images/brakes1.png" alt="Brakes feature 1" class="feature-card__images__image" />
+              </a>
+              <a href="#" class="feature-card__images__link">
+                <img src="./src/images/brakes2large.png" alt="Brakes feature 2" class="feature-card__images__image" />
+              </a>
             </div>
             <h3 class="feature-card__title">Hydraulic disc brakes & Lightweight</h3>
             <p class="feature-card__description">
@@ -244,31 +267,31 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="contact">
+      <section class="contact" id="contacts">
         <div class="section-title">
           <h2 class="section-title__content section-title__content--contact">Contact us</h2>
         </div>
 
         <div class="contact__content">
-          <form class="contact__form">
-            <input type="text" class="contact__input" placeholder="Name" required />
-            <input type="email" class="contact__input" placeholder="Email" required />
-            <textarea class="contact__textarea" placeholder="Message" required></textarea>
+          <form class="contact__form" onsubmit="this.reset(); return false;">
+            <input type="text" class="contact__input" placeholder="Name (e.g., John Doe)" required />
+            <input type="email" class="contact__input" placeholder="Email (e.g., john@example.com)" required />
+            <textarea class="contact__textarea" placeholder="Message (tell us your thoughts)" required></textarea>
             <button type="submit" class="btn btn--secondary">Send</button>
           </form>
 
           <div class="contact__info">
             <div class="contact-info">
               <p class="contact-info__label">Phone</p>
-              <p class="contact-info__value">+1 234 5555-55-55</p>
+              <a href="tel:+1 234 5555-55-55" class="contact-info__value contact-info__link">+1 234 5555-55-55</a>
             </div>
             <div class="contact-info">
               <p class="contact-info__label">Email</p>
-              <p class="contact-info__value">hello@miami.com</p>
+              <a href="mailto:hello@miami.com" class="contact-info__value contact-info__link">hello@miami.com</a>
             </div>
             <div class="contact-info">
               <p class="contact-info__label">Address</p>
-              <p class="contact-info__value">400 first ave.<br />suite 700<br />Minneapolis, MN 55401</p>
+              <a href="https://www.google.com/maps/search/400+first+ave+suite+700+Minneapolis+MN+55401" target="_blank" class="contact-info__value contact-info__link">400 first ave.<br />suite 700<br />Minneapolis, MN 55401</a>
             </div>
           </div>
         </div>

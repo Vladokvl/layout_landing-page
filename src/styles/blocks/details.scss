@@ -39,11 +39,12 @@
     align-items: stretch;
     overflow: hidden;
 
-    &__image {
+    &__link {
+      display: block;
+      overflow: hidden;
+      line-height: 0;
       width: 100%;
       height: auto;
-      object-fit: cover;
-      display: block;
 
       /* Mobile: 1 column each */
       grid-column: span 1;
@@ -57,10 +58,6 @@
         &:last-child {
           grid-column: span 2;
         }
-
-        aspect-ratio: auto;
-        height: auto;
-        object-fit: contain;
       }
 
       /* Laptop: first image 8 cols, second 4 cols */
@@ -73,10 +70,28 @@
           grid-column: span 4;
         }
       }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
     }
 
     &--reversed {
-      .feature-card__images__image {
+      .feature-card__images__link {
         /* Tablet: reversed - first 2 cols, second 4 cols */
         @include mixins.for-tablet-up {
           &:first-child {
