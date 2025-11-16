@@ -74,8 +74,14 @@
       img {
         display: block;
         width: 100%;
-        height: auto;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
         transition: transform 0.3s ease;
+
+        @include mixins.for-tablet-up {
+          height: auto;
+        }
       }
 
       &:hover img {

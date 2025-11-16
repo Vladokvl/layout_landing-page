@@ -13,7 +13,6 @@
     justify-content: space-between;
   }
 
-
   @include mixins.for-tablet-up {
     background-position: center;
   }
@@ -91,5 +90,4 @@
       }
     }
   }
-
 }
