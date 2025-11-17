@@ -83,7 +83,7 @@
         transition: transform 0.3s ease;
 
         @include mixins.for-tablet-up {
-          height: auto;
+          height: 100%;
           width: 100%;
         }
       }
