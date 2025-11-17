@@ -40,7 +40,9 @@
     overflow: hidden;
 
     &__link {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
       line-height: 0;
       width: 100%;
@@ -51,6 +53,7 @@
 
       /* Tablet: first image 4 cols, second 2 cols */
       @include mixins.for-tablet-up {
+
         &:first-child {
           grid-column: span 4;
         }
@@ -73,14 +76,15 @@
 
       img {
         display: block;
-        width: 100%;
-        height: 200px;
+        width: 130px;
+        height: 130px;
         object-fit: cover;
         object-position: center;
         transition: transform 0.3s ease;
 
         @include mixins.for-tablet-up {
           height: auto;
+          width: 100%;
         }
       }
 
