@@ -69,6 +69,12 @@
 
   &__logo {
     line-height: 0;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     // BEM element for logo image
     &-img {
